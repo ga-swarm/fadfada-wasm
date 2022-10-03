@@ -1,0 +1,47 @@
+[package]
+name = "fadfada-wasm"
+version = "0.0.0-alpha.1"
+edition = "2021"
+rust-version = "1.56"
+license = "GPL-3.0-or-later"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies.fadfada]
+#git = "https://gitlab.com/nolash/fadafada"
+git = "git://git.defalsify.org/fadfada"
+branch = "lash/wasm"
+features = ["yaml"]
+
+[dependencies.wasm-bindgen]
+version = "^0.2.78"
+
+[dependencies.web-sys]
+version = "0.3.57"
+features = [
+  'Headers',
+  'Request',
+  'RequestInit',
+  'RequestMode',
+  'Response',
+#  'Window',
+]
+
+[dependencies.js-sys]
+version = "0.3.57"
+
+[dependencies.wasm-bindgen-futures]
+version = "0.4.30"
+
+[dependencies.hex]
+version = "^0.4"
+
+[dependencies.log]
+version = "^0.4"
+
+[dependencies.env_logger]
+version = "^0.9"
+
